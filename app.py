@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return jsonify({"student_number": "200556572"})
+    return jsonify({"student_number": "200585516"})
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
@@ -18,11 +18,11 @@ def webhook():
     response = {"fulfillmentMessages": []}
     
     # Handle the Phonebrand intent
-    if intent_name == "Phonebrand":
+    if intent_name == "fruits":
         # List of phone brands
-        phone_brands = ["Apple", "Samsung", "LG", "Motorola", "Blackberry"]
+        phone_brands = ["Apple", "orange", "grapes", "banana", "Blueberry"]
         # Building the response text
-        response_text = "List of phone brands available in the market are: \n" + "\n".join([f"{i+1} - {item}" for i, item in enumerate(phone_brands)])
+        response_text = "Fruits I like to eat are: \n" + "\n".join([f"{i+1} - {item}" for i, item in enumerate(phone_brands)])
         
         # Set the response in the fulfillmentMessages format
         response["fulfillmentMessages"].append({
