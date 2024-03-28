@@ -20,9 +20,9 @@ def webhook():
     # Handle the Phonebrand intent
     if intent_name == "fruits":
         # List of phone brands
-        phone_brands = ["Apple", "orange", "grapes", "banana", "Blueberry"]
+        Fruits_Name = ["Apple", "orange", "grapes", "banana", "Blueberry"]
         # Building the response text
-        response_text = "Fruits I like to eat are: \n" + "\n".join([f"{i+1} - {item}" for i, item in enumerate(phone_brands)])
+        response_text = "Fruits I like to eat are: \n" + "\n".join([f"{i+1} - {item}" for i, item in enumerate(Fruits_Name)])
         
         # Set the response in the fulfillmentMessages format
         response["fulfillmentMessages"].append({
